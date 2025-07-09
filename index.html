@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cãoleta</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img id="logo-principal" src="logo.png" alt="Logo do Projeto Cãoleta">
+    </header>
+
+    <div id="inicio">
+        <h4>SEJA BEM-VINDO(A) AO PROJETO CÃOLETA 🐶</h4>
+        
+        <div class="botoes-inicio">
+            <button id="abrirSobre" onclick="mostrarSobre()">SOBRE</button>
+            <button id="abrirMenu" onclick="menu()">MENU</button>
+        </div>
+    </div>
+
+    <div id="menu" class="hidden">
+        <button onclick="mostrarDiv('cadastroUsuario')">CADASTRAR USUÁRIO</button>
+        <button onclick="mostrarDiv('cadastroPet'); selecionarUsuarios('selectUsuarioPet')">CADASTRAR PET</button>
+        <button onclick="mostrarDiv('cadastroPontoColeta')">CADASTRAR PONTO DE COLETA</button>
+        <button onclick="mostrarDiv('addPontos'); selecionarUsuarios('selectUsuarioPontos')">ADICIONAR PONTOS</button>
+        <button onclick="listarUsuarios_pets(); mostrarDiv('listarUsuarios')">LISTAR USUÁRIOS E PETS</button>
+        <button onclick="listarPontuacao(); mostrarDiv('listarPontos')">LISTAR PONTUAÇÃO</button>
+        <button onclick="listarPontosColeta(); mostrarDiv('listarPontoColeta')">LISTAR PONTOS DE COLETA</button>
+        <button onclick="voltarParaInicio()">VOLTAR AO INÍCIO</button>
+    </div>
+
+    <div id="container">
+        <div id="sobreNos" class="hidden">
+            <h1>SOBRE O PROJETO CÃOLETA</h1>
+            <p>O Projeto Cãoleta foi criado como proposta de solução para o problema do descarte incorreto dos desejos sólidos de animais domésticos como cães e gatos, buscando reduzir a poluição ambiental causada pela prática do descarte incorreto, incentivando um sistema sustentável de coleta e transformação do material orgânico em biofertilizantes destinados à jardinagem e arborização, bem como em geração de energia limpa e renovável. O aplicativo do Projeto Cãoleta visa incentivar o descarte correto por meio da obtenção de pontos a cada coleta realizada corretamente que poderão ser utilizados, posteriormente, para trocar por produtos e benefícios para o seu animal de estimação.</p>
+            <p>Acreditamos que, juntos, podemos fazer a diferença pelo nosso planeta e pelos nossos amigos de quatro patas!</p>
+            <button onclick="voltarParaInicio()">VOLTAR AO INÍCIO</button>
+        </div>
+
+        <div id="cadastroUsuario" class="hidden">
+            <h3>CADASTRAR USUÁRIO</h3>
+            <input type="text" name="nome" id="nome" placeholder="Nome">
+            <input type="text" name="cpf" id="cpf" placeholder="CPF">
+            <button onclick="cadastrarUsuario()">CADASTRAR</button>
+            <button onclick="voltarParaMenu()">VOLTAR AO MENU</button>
+        </div>
+
+        <div id="cadastroPet" class="hidden">
+            <h3>CADASTRAR PET</h3>
+            <label for="selectUsuarioPet">Selecionar Usuário:</label>
+            <select name="selectUsuario" id="selectUsuarioPet"></select>
+            <input type="text" name="nomePet" id="nomePet" placeholder="Nome do pet">
+            <input type="text" name="especie" id="especie" placeholder="Espécie">
+            <button onclick="cadastrarPet()">CADASTRAR</button>
+            <button onclick="voltarParaMenu()">VOLTAR AO MENU</button>
+        </div>
+
+        <div id="cadastroPontoColeta" class="hidden">
+            <h3>CADASTRAR PONTO DE COLETA</h3>
+            <input type="text" name="pontoDeColeta" id="pontoDeColeta" placeholder="Endereço do ponto de coleta">
+            <button onclick="cadastrarPontoColeta()">CADASTRAR</button>
+            <button onclick="voltarParaMenu()">VOLTAR AO MENU</button>
+        </div>
+
+        <div id="addPontos" class="hidden">
+            <h3>ADICIONAR PONTOS AO USUÁRIO</h3>
+            <select name="selectUsuarioPontos" id="selectUsuarioPontos"></select>
+            <input type="number" name="pontos" id="pontos" placeholder="Pontos" min="1">
+            <button onclick="addPontos()">ADICIONAR</button>
+            <button onclick="voltarParaMenu()">VOLTAR AO MENU</button>
+        </div>
+
+        <div id="listarUsuarios" class="hidden">
+            <h1>USUÁRIOS E PETS 🐾</h1>
+            </div>
+
+        <div id="listarPontos" class="hidden">
+            <h1>PONTUAÇÃO 🏆</h1>
+            <ol id="listaPontos"></ol>
+            </div>
+
+        <div id="listarPontoColeta" class="hidden">
+            <h1>PONTOS DE COLETA 📍</h1>
+            </div>
+
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

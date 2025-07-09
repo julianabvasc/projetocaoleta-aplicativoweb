@@ -1,0 +1,158 @@
+body {
+    background-color: #153996;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+
+#logo-principal {
+    width: 1000px;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+    #logo-principal {
+        width: 150px;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+button {
+    background-color: #eba337;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b0b4bd;
+}
+
+input, select {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+#container {
+    max-width: 600px;
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container > div {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#sobreNos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#sobreNos p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+
+h1, h2, h3 {
+    margin: 15px 0;
+    color: #eba337;
+    text-align: center;
+}
+
+li {
+    margin: 8px 0;
+    padding: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.botoes-inicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+#menu button {
+    padding: 12px 25px;
+    font-size: 15px;
+}
+
+#inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: auto;
+    padding-top: 10px;
+}
+
+#inicio h4 {
+    margin: 5px 0;
+    font-size: 1.5em;
+}
+
+#inicio button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
+}
